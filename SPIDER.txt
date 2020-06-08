@@ -1,0 +1,55 @@
+Desription:
+
+Spider is a type of patience game, known in Chinese as ?????.
+
+The game is played with 2 decks of cards (104 cards). The player's goal
+is to remove all cards from the game area. Initially, 54 cards are
+placed in the game area distributed across 10 stacks, with only the top
+card of each stack visible to the player. The player can then move cards
+across stacks, and each move is legal if
+(1) cards moved are of the same suit and arranged in consecutive 
+    numerical order, with the smallest on top, and
+(2) the rank of the top card of the destination exceed that of the
+    bottom card of the moved cards by 1.
+
+The player can also redeal up to 5 times. Each redeal adds 10 cards to the
+game area, with 1 card on each stack. No stack should be empty in order to
+redeal. All 5 redealing must be done to win the game.
+
+The player will have to input commands to control the game. Possible
+commands are given below:
+Possible commands are shown below:
+N M: N and M are integers from 0 to 9, with 0 corresponding to the
+     leftmost stack and 9 corresponding to the rightmost stack. Cards
+     will be moved from stack N to stack M if the desired move is
+     legal. Such move, if legal, is always unique.
+r:   Redeal.
+x:   Exit the game.
+Commands are case-insensitive.
+
+The above information is also given in MatLab using 'help spider'.
+
+
+Project files:
+
+spider.m - main program
+cardstack.m - contains the handle class 'cardstack' and 2 methods
+              'countchain' and 'move'
+card.m - contains the value class 'card'
+resource - directory containing the following 2 files
+    card.png - card graphics (front)
+    back.png - card graphics (back)
+    graphics are created by me using MS Paint.
+
+
+Game flow:
+
+The player should call spider(suit) to start the game. Possible values
+of suit are 1, 2 and 4. Defaulted to 4 if it is not provided. 1 suit
+spider is the easiest and 4 suit spider is the hardest.
+
+My program will then create a game area in figure 1. The player is advised
+to enlarge the figure so that it takes up at least half of the screen to
+improve visibility.
+
+The player can then input commands via the console to play the game.
